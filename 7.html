@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScriptda pop-up boxlar</h2>
+    <p id="confirm"></p>
+    <p id="prompt"></p>
+
+    <button onclick="showAlert()">Alert</button>
+    <button onclick="showConfirmation()">Confirmation</button>
+    <button onclick="showPrompt()">Prompt</button>
+
+    <script>
+        function showAlert() {
+            alert("Diqqat! Bu Alert box!");
+        }
+
+        function showConfirmation() {
+            let txt = '';
+            if (confirm('Shartlarga rozimisiz?')) {
+                txt = 'Ha';
+            } else {
+                txt = 'Yo\'q';
+            }
+            document.getElementById('confirm').innerHTML = txt;
+        }
+
+        function showPrompt() {
+            let txt = '';
+            let userName = prompt("Iltimos, o'zingizni tanishtirsangiz.", "Ismingiz?");
+            if (userName === null || userName === '') {
+                txt = "Ismingizni kiritmadingiz, afsus.";
+            } else {
+                txt = "Assalomu alaykum, " + userName + "! Qandaysiz?";
+            }
+            document.getElementById("prompt").innerHTML = txt;
+        }
+    </script>
+
+</body>
+
+</html>

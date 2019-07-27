@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <div class="hello">Bu matn almashadi.</div>
+
+    <div class="hello">Bu matn qoladi.</div>
+    <br>
+    <button onclick="myFunction()">Meni bosing</button>
+
+    <script>
+        function myFunction() {
+            let myDivs = document.getElementsByClassName("hello");
+            let myFirstDiv = myDivs[0];
+            if (myFirstDiv != null)
+                myFirstDiv.innerHTML = "Salom!";
+        }
+    </script>
+</body>
+
+</html>

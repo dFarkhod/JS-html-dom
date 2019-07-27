@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .greenclass {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Assalomu alaykum!</h1>
+
+    <p id="pDescription">Quyidagi tugmani bosilsa, h1 elementiga "class" atributi beriladi. Uning qiymati "greenclass"
+        bo'ladi.</p>
+
+    <button onclick="setColor()">Meni bosing</button>
+    <button onclick="changeStyle()">Meni ham bosing</button>
+    <script>
+        function setColor() {
+            let h1Element = document.getElementsByTagName("h1")[0];
+            if (h1Element != null)
+                h1Element.setAttribute("class", "greenclass");
+        }
+
+        function changeStyle() {
+            document.getElementById("pDescription").style.color = "red";
+        }
+    </script>
+
+</body>
+
+</html>
